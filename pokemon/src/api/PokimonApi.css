@@ -1,0 +1,53 @@
+/* Heading */
+.pokemon-title {
+    text-align: center;
+    margin: 20px 0 40px 0; /* space above + below heading */
+    font-size: 2rem;
+    color: #222;
+  }
+  
+  /* Card container grid */
+  .pokemon-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 per row */
+    gap: 15px; /* neat spacing */
+    justify-items: center;
+    padding: 0 20px 40px; /* spacing around grid */
+    background-color: #f8f8f8;
+  }
+  
+  /* Pokémon card */
+  .pokemon-card {
+    border: 2px solid #333;
+    border-radius: 10px;
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+    width: 240px;
+    height: 300px;
+    box-sizing: border-box;
+  }
+  
+  /* Pokémon image */
+  .pokemon-card img {
+    width: 140px;
+    height: 140px;
+    object-fit: contain;
+    margin-bottom: 15px;
+  }
+  
+  /* Pokémon name */
+  .pokemon-card h3 {
+    margin: 10px 0;
+    text-transform: capitalize;
+    font-size: 1.3rem;
+    color: #111;
+  }
+  
+  /* Pokémon type */
+  .pokemon-card p {
+    margin: 5px 0;
+    font-size: 1rem;
+    color: #444;
+  }
+  

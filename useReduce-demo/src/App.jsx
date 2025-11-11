@@ -51,56 +51,14 @@
 //reducer --> accept 2 things --> state , action
 
 
-import {  useReducer } from "react"
-const initialState = {count:0};
-
-function reducer(state, action ){
-  if(action.type === 'INCREMENT'){
-    return {...state ,count :  state.count+1}
-  }
-  if(action.type === 'RESET'){
-    return {...state ,count :  0}
-  }
-  if(action.type === 'DECREMENT'){
-    return {...state ,count :  state.count-1}
-  }
-
-}
+import React from 'react'
+import Form from './Components/Form'
 
 function App() {
-
-const [state,dispatch]= useReducer(reducer, initialState );
-
-  const handleInc =  () => {
-      dispatch({
-        type : "INCREMENT"
-      })
-  }
-
-  const handleReset =  () => {
-    dispatch({
-      type : "RESET"
-    })
-  }
-
-  const handleDec =  () => {
-    dispatch({
-      type : "DECREMENT"
-    })
-    
-  }
-
   return (
-    <>
-      <h1>Counter</h1>
-      <hr />
-      <h1>{state.count}</h1>
-      <button onClick={handleInc}>Increase</button>
-      <button onClick={handleReset}>Reset</button>
-      <button onClick={handleDec}>Decrease</button>
-      
-
-    </>
+    <div>
+      <Form/>
+    </div>
   )
 }
 

@@ -11,10 +11,8 @@ export default function AddTodo({onAdd}){
 
     }
 
-   
-    return(
+   return(
         <>
-            
             <input
             value={todo}
             type="text" 

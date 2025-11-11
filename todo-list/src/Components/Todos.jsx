@@ -65,11 +65,8 @@ function Todos() {
                  <button onClick ={() => handleEditTodo(index)}>Edit</button> { ' '}
                     </>
                 )}
-                 {/* {item} { ' '} */}
-
-                 
-            </li>
-            
+                 {/* {item} { ' '} */}   
+            </li>    
         ))}
 
         

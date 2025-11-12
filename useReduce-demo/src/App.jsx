@@ -53,11 +53,13 @@
 
 import React from 'react'
 import Form from './Components/Form'
+import AgeIncremet from './Components/AgeIncremet'
 
 function App() {
   return (
     <div>
-      <Form/>
+      {/* <Form/> */}
+      <AgeIncremet/>
     </div>
   )
 }

@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import useAddTodo from "../Hooks/useAddTodo"
+
 
 function Todo2({customAdd}) {
   

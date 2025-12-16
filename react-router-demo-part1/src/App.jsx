@@ -8,6 +8,9 @@ import {
   RouterProvider,
 } from "react-router-dom";
 
+import { Home, About, Posts, Error, Contact } from "./Pages";
+import RootLayouts from "./layouts/RootLayouts";
+
 //step - 2
 // create router
 
@@ -15,12 +18,13 @@ import {
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route>
-      <Route path="/" element={<h1>Home page... </h1>} />
-      <Route path="/about" element={<h1>about page... </h1>} />
-      <Route path="/contact" element={<h1>contact page... </h1>} />
-      <Route path="/posts" element={<h1>postsssssss page... </h1>} />
-      <Route path="*" element={<h1>Error page... </h1>} />
+    <Route path="/" element={<RootLayouts />}>
+      <Route index element={<Home />} />
+      {/* index route parent route ka default child hota hai. */}
+      <Route path="/about" element={<About />} />
+      <Route path="/contact" element={<Contact />} />
+      <Route path="/posts" element={<Posts />} />
+      <Route path="*" element={<Error />} />
     </Route>
   )
 );

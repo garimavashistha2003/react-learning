@@ -8,8 +8,17 @@ import {
   RouterProvider,
 } from "react-router-dom";
 
-import { Home, About, Posts, Error, Contact } from "./Pages";
+import {
+  Home,
+  About,
+  Posts,
+  Error,
+  Contact,
+  PostDetail,
+  Loggin,
+} from "./Pages";
 import RootLayouts from "./layouts/RootLayouts";
+import RequireAuth from "./Components/RequireAuth";
 
 //step - 2
 // create router
@@ -23,7 +32,18 @@ const router = createBrowserRouter(
       {/* index route parent route ka default child hota hai. */}
       <Route path="/about" element={<About />} />
       <Route path="/contact" element={<Contact />} />
-      <Route path="/posts" element={<Posts />} />
+      <Route path="/loggin" element={<Loggin />} />
+      <Route
+        path="/posts"
+        element={
+          <RequireAuth>
+            {" "}
+            <Posts />{" "}
+          </RequireAuth>
+        }
+      />
+      <Route path="/posts/:id" element={<PostDetail />} />
+
       <Route path="*" element={<Error />} />
     </Route>
   )
@@ -38,3 +58,13 @@ function App() {
 }
 
 export default App;
+
+// 👉 element ka matlab:
+
+// Match hone par kaunsa React component dikhana hai
+
+// 👉 path="/about" ka matlab:
+
+// Jab URL me /about hoga
+
+// Tab ye route match karega
